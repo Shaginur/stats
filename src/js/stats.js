@@ -22,11 +22,20 @@ export function getLastGrade(grades) {
   return nomberLast || 0
 }
 
+// export function getAverageGrade(grades) {
+//   const [a, b, c, d, f] = grades
+//   const average = (a + b + c + d + f) / grades.length
+//   return average || 0
+// }
+
 export function getAverageGrade(grades) {
-  const [a, b, c, d, f] = grades
-  const average = (a + b + c + d + f) / grades.length
-  return average || 0
+  let coint = 0
+  for (let i = 0; i < grades.length; i++) {
+    coint += Number(grades[i])
+  }
+
+  return coint / grades.length
 }
 
-// Домашку зделала сам и пкрвое дополнительное задания
+// Домашку зделала сам и првое дополнительное задания тоже
 //Остольное копировал кусками у вас так чтобы понять что для чего и как работает
